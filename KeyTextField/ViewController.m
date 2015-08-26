@@ -73,7 +73,7 @@ NSInteger currentPage;
     double keyboardHeight = keyboardRect.size.height;//键盘高度
     //计算偏移
     _heightOffset =[[UIScreen mainScreen] bounds].size.height - keyboardHeight  - REGISTERTABLE_CELL_HEGHIT;
-
+   
     CGFloat translateY=(-1);
     [self animation:translateY];
     [self hidden];

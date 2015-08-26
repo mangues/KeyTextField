@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NoV-WY-YzE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -81,7 +81,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="370.99999999999994"/>
+            <point key="canvasLocation" x="-209" y="979"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wA5-N4-VQt">
+            <objects>
+                <viewController id="NoV-WY-YzE" customClass="MGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cFL-Be-HWb"/>
+                        <viewControllerLayoutGuide type="bottom" id="M9o-Uk-fnJ"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="UyJ-YR-CDt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-ic-y0L">
+                                <rect key="frame" x="243" y="342" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lNr-A5-K9g"/>
+                                    <constraint firstAttribute="width" constant="97" id="w3H-ir-lcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwN-sx-a6J">
+                                <rect key="frame" x="243" y="494" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="PY1-Ue-r0Y"/>
+                                    <constraint firstAttribute="height" constant="30" id="eZJ-ZX-9mb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg3-IO-1QF">
+                                <rect key="frame" x="243" y="419" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dww-UY-uJO"/>
+                                    <constraint firstAttribute="width" constant="97" id="xeC-5u-zap"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30980393290000002" green="0.88627457620000005" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="M9o-Uk-fnJ" firstAttribute="top" secondItem="bwN-sx-a6J" secondAttribute="bottom" constant="76" id="I4T-TW-UF8"/>
+                            <constraint firstAttribute="centerX" secondItem="aHA-ic-y0L" secondAttribute="centerX" id="K4P-Yb-9cl"/>
+                            <constraint firstItem="Gg3-IO-1QF" firstAttribute="leading" secondItem="bwN-sx-a6J" secondAttribute="leading" id="LoZ-lj-IbQ"/>
+                            <constraint firstItem="Gg3-IO-1QF" firstAttribute="leading" secondItem="aHA-ic-y0L" secondAttribute="leading" id="NGY-Ma-hbL"/>
+                            <constraint firstItem="Gg3-IO-1QF" firstAttribute="top" secondItem="aHA-ic-y0L" secondAttribute="bottom" constant="45" id="mCY-wQ-lyD"/>
+                            <constraint firstItem="bwN-sx-a6J" firstAttribute="top" secondItem="Gg3-IO-1QF" secondAttribute="bottom" constant="45" id="xgX-cP-Owk"/>
+                        </constraints>
+                    </scrollView>
+                    <connections>
+                        <outlet property="text1" destination="aHA-ic-y0L" id="twt-Bx-EQN"/>
+                        <outlet property="text2" destination="Gg3-IO-1QF" id="8Gi-qu-fHk"/>
+                        <outlet property="text3" destination="bwN-sx-a6J" id="FnJ-tO-L2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oq-jM-egr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-246" y="279"/>
         </scene>
     </scenes>
 </document>
