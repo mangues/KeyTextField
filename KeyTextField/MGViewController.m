@@ -150,23 +150,28 @@
  *  添加底部toolbar 的UI
  */
 - (void)setToolbarUI{
-    //定义一个toolBar
-    topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40)];
-    //设置style
-    //[topView setBarStyle:UIBarStyleBlack];
-    [topView setBackgroundColor:[UIColor greenColor]];
+//    //定义一个toolBar
+//    topView = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 40)];
+//    //设置style
+//    //[topView setBarStyle:UIBarStyleBlack];
+//    [topView setBackgroundColor:[UIColor greenColor]];
+//    
+//    //定义两个flexibleSpace的button，放在toolBar上，这样完成按钮就会在最右边
+//    UIBarButtonItem * button1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(backKeyboard)];
+//    
+//    UIBarButtonItem * button2 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"forward"] style:UIBarButtonItemStyleDone target:self action:@selector(forwardKeyboard)];
+//    
+//    UIBarButtonItem * button3 = [[UIBarButtonItem  alloc]initWithBarButtonSystemItem:                                        UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+//    //定义完成按钮
+//    UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone  target:self action:@selector(doneKeyboard)];
+//    //在toolBar上加上这些按钮
+//    NSArray * buttonsArray = [NSArray arrayWithObjects:button1,button2,button3,doneButton,nil];
+//    [topView setItems:buttonsArray];
     
-    //定义两个flexibleSpace的button，放在toolBar上，这样完成按钮就会在最右边
-    UIBarButtonItem * button1 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(backKeyboard)];
     
-    UIBarButtonItem * button2 = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"forward"] style:UIBarButtonItemStyleDone target:self action:@selector(forwardKeyboard)];
-    
-    UIBarButtonItem * button3 = [[UIBarButtonItem  alloc]initWithBarButtonSystemItem:                                        UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-    //定义完成按钮
-    UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone  target:self action:@selector(doneKeyboard)];
-    //在toolBar上加上这些按钮
-    NSArray * buttonsArray = [NSArray arrayWithObjects:button1,button2,button3,doneButton,nil];
-    [topView setItems:buttonsArray];
+    UIStoryboard *secondStoryboard = [UIStoryboard storyboardWithName:@"toolbar" bundle:nil];
+    UIViewController *firstVC = [secondStoryboard instantiateViewControllerWithIdentifier:@"toolbarId"];
+    topView = [firstVC.view viewWithTag:10];
  
        
 }
